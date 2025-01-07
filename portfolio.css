@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    align-items: center;
+    position: absolute ;
+    top: 0; /* Place at the very top of the page */
+    right: 10; /* Adjust the distance from the right side */
+    left: 0;
+    padding: 1px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 100; /* Ensure the nav stays on top of the image */
+}
+
+nav ul {
+    display: flex; /* Align the items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 20px 0; /* Adds some padding on the top for spacing */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    font-family: 'Times New Roman', serif !important; /* Ensure the font is serif */
+    color: white; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500;
+    font-size: 18px; /* Adjust font size */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* For hover effect */
+    transition: border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #01adec; /* Change text color on hover */
+    border-bottom: 2px solid #f54242; /* Add underline effect on hover */
+}
+
+/* Portfolio Section */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    background: #121119;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(221, 144, 20, 0.813);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Resume Preview */
+.preview-frame {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.download-button,
+.preview-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #01adec, #2b393f);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover,
+.preview-button:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+

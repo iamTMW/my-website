@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Taha Mohyuddin</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head> 
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-container">
+        <h2></h2>
+        <div class="grid-container">
+            <!-- Resume Preview -->
+            <div class="portfolio-item">
+                <h3>Resume</h3>
+                <iframe src="images/ResTMpdf.pdf" class="preview-frame" title="Resume Preview"></iframe> 
+                <button class="preview-button" onclick="openModal('images/respic.png')">Preview</button>
+          <!--  <a href="images/ResTMpdf.pdf" class="download-button" target="_blank">Preview</a>   -->
+                <a href="images/ResTMpdf.pdf" class="download-button" download>Download Resume</a> 
+
+                
+            </div>
+
+            <!-- Certificates -->
+            <div class="portfolio-item">
+                <h3>Certificate 1</h3>
+                <img src="images/certificate1.jpeg" class="preview-img" alt="Certificate 1">
+                <button class="preview-button" onclick="openModal('images/certificate1.jpeg')">Preview</button>
+                <a href="images/certificate1.jpeg" class="download-button" download>Download Certificate 1</a>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Certificate 2</h3>
+                <img src="images/cyber.jpeg" class="preview-img" alt="Certificate 2">
+                <button class="preview-button" onclick="openModal('images/cyber.jpeg')">Preview</button>
+                <a href="images/cyber.jpeg" class="download-button" download>Download Certificate 2</a>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Certificate 3</h3>
+                <img src="images/data.jpeg" class="preview-img" alt="Certificate 3">
+                <button class="preview-button" onclick="openModal('images/data.jpeg')">Preview</button>
+                <a href="images/data.jpeg" class="download-button" download>Download Certificate 3</a>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Certificate 4</h3>
+                <img src="images/design .jpeg" class="preview-img" alt="Certificate 4">
+                <button class="preview-button" onclick="openModal('images/design.jpeg')">Preview</button>
+                <a href="images/design.jpeg" class="download-button" download>Download Certificate 4</a>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Certificate 5</h3>
+                <img src="images/ai.jpeg" class="preview-img" alt="Certificate 5">
+                <button class="preview-button" onclick="openModal('images/ai.jpeg')">Preview</button>
+                <a href="images/ai.jpeg" class="download-button" download>Download Certificate 5</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Image Preview -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("imageModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
+
+

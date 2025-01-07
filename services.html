@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Taha Mohyuddin</title>
+    <link rel="stylesheet" href="servpage_style.css">
+</head> 
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', 'sans-serif';
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #000000;
+        color: #fff;
+    }
+
+    /* Navigation Bar Styling */
+    nav {
+        display: flex;
+        justify-content: flex-end; /* Align navigation to the right */
+        align-items: center;
+        position: absolute ;
+        top: 0; /* Place at the very top of the page */
+        right: 10; /* Adjust the distance from the right side */
+        left: 0;
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        z-index: 100; /* Ensure the nav stays on top of the image */
+       
+    }
+
+    nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #01adec;
+            border-bottom: 2px solid #f54242;
+            text-shadow: 0 0 10px cyan, 0 0 20px magenta;
+        }
+
+        /* Services Section */
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+            padding: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Section Title */
+        .services-title {
+            font-size: 3rem;
+            color: #01adec;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px cyan, 0 0 20px rgb(34, 15, 133);
+            animation: glitch 1s infinite linear alternate-reverse;
+        }
+
+        /* Service Cards - Glassmorphism */
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan, 0 0 30px rgb(15, 38, 211);
+        }
+
+        .service-card h2 {
+            font-size: 2rem;
+            color: #01adec;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(1px, 1px) skew(0deg); }
+            25% { transform: translate(-1px, -2px) skew(1deg); }
+            50% { transform: translate(-3px, 0px) skew(-1deg); }
+            75% { transform: translate(3px, 2px) skew(0deg); }
+            100% { transform: translate(1px, -1px) skew(1deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (Unchanged) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-container">
+        <h1 class="services-title">💻 My Services</h1>
+
+        <div class="service-card">
+            <h2>🌐 Web Developer</h2>
+            <p>• Developed and managed websites, showcasing expertise in web design.<br>
+                • Collaborated with teams to create custom website solutions.<br>
+                • Implemented SEO strategies to enhance online presence and engagement.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>🎓 Sensei / Teacher</h2>
+            <p>• Conducted camps & tech-based learning programs (Web Dev, YouTube, Roblox Development, etc.).<br>
+                • Assisted in expanding technology-based education with robotics and 3D printing.<br>
+                • Focused on students in Scratch, Roblox Studio, Unity, and more.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>🤖 Artificial Intelligence Engineer</h2>
+            <p>• Developed AI algorithms for network optimization, security & predictive maintenance.<br>
+                • Built AI-powered chatbots to enhance customer service efficiency.<br>
+                • Analyzed large datasets for actionable insights & business growth.</p>
+        </div>
+    </div>
+</body>
+
+</html>

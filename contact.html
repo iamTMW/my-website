@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Taha Mohyuddin</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Social Media Icon Styling */
+        .social-media {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-media a {
+            color: white;
+            font-size: 32px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+            color: #01adec;
+        }
+
+        .social-media a i {
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Success Notification */
+        #successNotification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, cyan, rgb(1, 20, 36));
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            display: none; /* Initially hidden */
+            animation: fadeInOut 4s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(20px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(20px); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div id="about-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                </div>
+
+                <!-- Company Name Input -->
+                <div class="form-group">
+                    <label for="company">Company Name (if applicable)</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name">
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your inquiry or message here..." rows="5" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Send Email</button>
+            </form>
+
+            <!-- Success Notification -->
+            <div id="successNotification">✅ Email Sent Successfully!</div>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/taha-mohyuddin-1795a522a" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/iamTMW" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/tahamohyuddin10/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let formData = new FormData(this);
+
+            fetch("https://formsubmit.co/ajax/tahamohyuddin30@gmail.com", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(Object.fromEntries(formData))
+            }).then(response => response.json())
+              .then(data => {
+                  if (data.success === "true") {
+                      // Show Success Notification
+                      let notification = document.getElementById("successNotification");
+                      notification.style.display = "block";
+
+                      // Hide notification after 3 seconds
+                      setTimeout(() => {
+                          notification.style.display = "none";
+                      }, 3000);
+
+                      // Reset form
+                      document.getElementById("contact-form").reset();
+                  } else {
+                      alert("⚠️ Email not sent. Try again.");
+                  }
+              })
+              .catch(error => {
+                  console.error("Error:", error);
+                  alert("⚠️ Something went wrong! Try again.");
+              });
+        });
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,135 @@
+/* General Styling */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* the about, services, protfolio section */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align the navigation to the right */
+    align-items: center;
+    position: absolute;
+    top: 0; /* Place at the very top of the page */
+    right: 50px; /* Adjust the distance from the right side */
+    width: 100%;
+    z-index: 100; /* Ensure the nav stays on top of the image */
+}
+
+nav ul {
+    display: flex; /* Align the items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 20px 0; /* Adds some padding on the top for spacing */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    color: white; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* For hover effect */
+    transition: border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #01adec; /* Change text color on hover */
+    border-bottom: 2px solid #f54242; /* Add underline effect on hover */
+}
+/* ends*/ 
+/* Navigation Styling */
+
+
+/* Flexbox Layout for About Section */
+.about-container {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-around; /* Add space between image and text */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+/* Image Styling */
+.about-image img {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+/* Text Content Styling */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    max-width: 600px;
+    text-align: left; /* Ensure proper alignment */
+}
+
+.about-text {
+    margin-bottom: 20px;
+    line-height: 1.5; /* Improve text readability */
+} 
+
+/* Glowing Box Styling */
+.glowing-box {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: linear-gradient(145deg, #1a1a1a, #000000);
+    box-shadow: 0 0 15px hsla(268, 91%, 43%, 0.303), 0 0 25px rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.glowing-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(6, 14, 232), 0 0 30px cyan;
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 2rem;
+    color: #01adec;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgb(4, 0, 255), 0 0 20px cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Icons for Sections */
+.section-header img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Paragraph Text */
+.glowing-box p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+
+
+
+
+
+
+

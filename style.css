@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+
+}
+body{
+    background: #000000;
+    color: #fff;
+}
+#header {
+    width: 100%;
+    height: 100vh; /* Make sure it fits the viewport height */
+    background-image: url(images/background2.jpg); /* Ensure the path to your image is correct */
+    background-size: contain; /* Contain the image so it fits the section without cutting off */
+    background-position: bottom right; /* Align the image to the bottom right */
+    background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+    display: flex;
+    justify-content: flex-end; /* This is used for aligning any additional content */
+    align-items: center; /* Centers additional content vertically */
+}
+.container{
+    padding: 10px 10%;
+}
+.logo {
+    position: absolute; /* Allows you to position the logo relative to the page */
+    top: 20px; /* Distance from the top of the page */
+    left: 60px; /* Distance from the left side of the page */
+    max-width: 150px; /* Adjust the size of the logo if needed */
+    height: auto; /* Maintain the aspect ratio */
+    z-index: 100; /* Ensures the logo stays on top of other elements */
+}
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align the navigation to the right */
+    align-items: center;
+    position: absolute;
+    top: 0; /* Place at the very top of the page */
+    right: 50px; /* Adjust the distance from the right side */
+    width: 100%;
+    z-index: 100; /* Ensure the nav stays on top of the image */
+}
+
+nav ul {
+    display: flex; /* Align the items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 20px 0; /* Adds some padding on the top for spacing */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav ul li a {
+    color: white; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* For hover effect */
+    transition: border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #01adec; /* Change text color on hover */
+    border-bottom: 2px solid #f54242; /* Add underline effect on hover */
+}
+.header-text {
+    position: absolute;
+    top: 200px; /* Adjusts the position below the logo */
+    left: 150px; /* Adjusts the position from the left */
+    font-size: 30px; /* Font size for the text */
+    color: white; /* Set the text color */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+.header-text h1 {
+    font-size: 50px; /* Make the heading larger for emphasis */
+    font-weight: bold; /* Bold text */
+    margin: 10px 0; /* Space around heading */
+}
+
+.header-text p {
+    font-size: 20px; /* Smaller paragraph text */
+    margin-bottom: 20px; /* Space at the bottom of the paragraph */
+}
+
+.header-text span {
+    font-weight: 300; /* Lighter weight for "UI/UX Designer" */
+    font-size: 24px;
+    display: block; /* To keep it on a separate line */
+    margin-bottom: 10px; /* Space between elements */
+} 
+/* fav Section Styling */
+.fav-section {
+    padding: 50px 10%;
+    background: #000000; /* You can change the color if needed */
+    color: #fff;
+    height: 100vh; /* Full height for vertical centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav-container {
+    display: flex;
+    flex-direction: row; /* Align the image and text side by side */
+    gap: 40px; /* Space between the images and the text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.fav-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between the images */
+}
+
+.fav-images img {
+    width: 250px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fav-images img:hover {
+    transform: scale(1.05); /* Adds hover effect for interaction */
+}
+
+.fav-text {
+    max-width: 500px; /* Limit the width of the text */
+    line-height: 1.6;
+}
+
+.fav-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.fav-text p {
+    font-size: 18px;
+} 
+
+.typing {
+    font-size: 18px;
+    max-width: 100%; /* Ensure text occupies full width of its container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+    border-right: 3px solid #fff; /* Simulate a cursor */
+    animation: typing 8s steps(80, end), blink-caret 0.75s step-end infinite; /* Adjusted timing */
+    display: inline-block;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking caret */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+} 
+
+
+
+.fav-text {
+    max-width: 600px; /* Ensure that the text fits into the container */
+    line-height: 1.6;
+}
+/* My Work Section Styling */
+.work-section {
+    padding: 100px 10%;
+    background: #000000; /* Matches the rest of the portfolio styling */
+    color: #fff;
+    text-align: center;
+}
+
+.work-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.work-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.work-item {
+    background: #222; /* Dark background for work items */
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%; /* Make each work item take roughly one-third of the row */
+    min-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.work-item:hover {
+    transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure images maintain proportions */
+}
+
+.work-description {
+    padding: 20px;
+}
+
+.work-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #01adec; /* You can adjust the color for a consistent theme */
+}
+
+.work-description p {
+    font-size: 16px;
+    color: #ddd; /* Light gray for text */
+}
+ 
+/* About page */  
+/* Work Section Styling */
+.work-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.work-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Project Card Styling */
+.work-item {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 320px; /* Adjust this based on your layout */
+    height: 450px; /* Ensures equal height for both cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item img {
+    width: 100%;
+    height: 60%; /* Ensures images take up the same amount of space */
+    object-fit: cover;
+    border-bottom: 3px solid #01adec;
+}
+
+/* Description Box */
+.work-description {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Project Titles */
+.work-description h3 {
+    color: #01adec;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.work-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+

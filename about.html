@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Taha Mohyuddin</title>
+    <link rel="stylesheet" href="aboutpage_style.css">
+</head> 
+
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', 'sans-serif';
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #000000;
+        color: #fff;
+    }
+
+    /* Navigation Bar Styling */
+    nav {
+        display: flex;
+        justify-content: flex-end; /* Align navigation to the right */
+        align-items: center;
+        position: absolute ;
+        top: 50; /* Place at the very top of the page */
+        right: 10; /* Adjust the distance from the right side */
+        left: 0;
+        padding: 5px 50px;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        z-index: 100; /* Ensure the nav stays on top of the image */
+    }
+
+    nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 15px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #01adec;
+            border-bottom: 2px solid #f54242;
+            text-shadow: 0 0 10px cyan, 0 0 20px magenta;
+        }
+
+        /* About Section */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 120px;
+            padding: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Profile Image - 3D Hover Effect */
+        .about-image img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 0 25px cyan, 0 0 40px rgb(0, 217, 255);
+        }
+
+        /* Text Glitch Effect */
+        .about-text h2 {
+            font-size: 2rem;
+            color: #01adec;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 0 0 5px cyan, 0 0 10px magenta;
+            animation: glitch 1s infinite linear alternate-reverse;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Cyberpunk Contact Button */
+        .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, cyan, rgb(15, 0, 69));
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px magenta, 0 0 25px cyan;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(1px, 1px) skew(0deg); }
+            25% { transform: translate(-1px, -2px) skew(1deg); }
+            50% { transform: translate(-3px, 0px) skew(-1deg); }
+            75% { transform: translate(3px, 2px) skew(0deg); }
+            100% { transform: translate(1px, -1px) skew(1deg); }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 25px rgb(144, 0, 255), 0 0 30px cyan;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (Unchanged) -->
+    <div id="about-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-container">
+        <!-- Profile Image -->
+        <div class="about-image">
+            <img src="images/longneck.jpg" alt="Taha Mohyuddin">
+        </div>
+
+        <!-- About Me Section -->
+    <div class="glowing-box">
+        <h2 class="section-header">
+        <img src="" alt="About Icon"> About Me – Taha Mohyuddin
+        </h2>
+        <p>
+            Hello, World! I'm Taha Mohyuddin. I’m a second-year Computer Science student in my 4th semester at the University of Guelph, 
+            passionate about technology, innovation, and problem-solving. From crafting clean and efficient code 
+            to exploring the latest advancements in AI and web development, I thrive on bringing ideas to life 
+            through technology.
+        </p>
+        </div>
+
+        <!-- What Drives Me Section -->
+    <div class="glowing-box">
+        <h2 class="section-header">
+        <img src="" alt="Drive Icon"> What Drives Me?
+        </h2>
+        <p>
+            I believe in continuous learning and hard work — whether it's mastering a new programming language, 
+            optimizing an algorithm, or designing a seamless user experience. Coding isn’t just a skill for me; 
+            it’s a passion that fuels my creativity and keeps me engaged in solving real-world challenges.
+        </p>
+    </div>
+
+    <div class="glowing-box">
+        <h2 class="section-header">
+        <img src="" alt="Drive Icon"> My Goals
+        </h2>
+            <p>
+                I'm actively seeking internships and job opportunities where I can contribute my skills while 
+                growing as a developer. I’m eager to collaborate with innovative teams and gain hands-on experience.
+            </p>
+        </div>
+
+        <div class="glowing-box">
+            <h2 class="section-header">
+            <img src="" alt="Drive Icon"> Skills & Technologies
+            </h2>
+            <p> 
+                ✔ Languages: Java, Python, C/C, SQL (Postgres), JavaScript, HTML/CSS, R, Motorola 68000 <br>
+                ✔ Software: Machine Learning, Linux, Web Development, AI, Cybersecurity <br>
+                ✔ Developer Tools: Unity, Scratch, Roblox Studio, WordPress, OpenAI, GPT, Token <br>
+                ✔ Soft Skills: Communication, Organization, Time Management, Troubleshooting, Problem-Solving <br>
+                
+            </p>
+        </div>
+
+        <div class="glowing-box">
+            <h2 class="section-header">
+            <img src="" alt="Drive Icon"> Beyond Coding
+            </h2>
+            <p>While I love programming, I also love sports and staying active. I play soccer and cricket regularly, which helps me stay disciplined, competitive, and goal-oriented. Life isn't just about coding—it's about enjoying the journey, exploring new experiences, and making meaningful connections.</p>
+            
+            
+        </div>
+
+        <!-- Contact Me Button (Doesn't Change Navbar) -->
+        <a href="contact.html" class="contact-button">➡️ Contact Me</a>
+    </div>
+    
+        
+</body>
+
+</html>

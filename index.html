@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul>
+                   <!-- Home button links to the home page (index.html) -->
+                <li><a href="index.html">Home</a></li>
+                <!-- About button links to the separate about page (about.html) -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p></p>
+                <h1>Hi, I'm Taha Mohyuddin <br><span class="typing2">a Software Developer</span></h1>
+            </div>
+        </div>
+    </div>
+
+   <!-- Fav Quote section -->
+<div id="fav" class="fav-section">
+    <div class="fav-container">
+        <!-- Images Container -->
+        <div class="fav-images">
+            <img src="images/image2.jpg" alt="Photo 1">
+        </div>
+        <!-- fav text Text -->
+        <div class="fav-text">
+            <h2>Fav Quote</h2>
+            <p class="typing">Compromise for your Dream but NEVER Compromise on your Dream.</p>
+        </div>
+    </div>
+</div>
+    <!-- My Work Section -->
+<div id="my-work" class="work-section">
+    <h2>My Projects</h2>
+    <div class="work-container">
+        
+        <!-- Project 1 -->
+        <a href="chatbot.html" class="work-item">
+            <img src="images/chatbot picfree.avif" alt="Chat Bot">
+            <div class="work-description">
+                <h3>Chat Bot</h3>
+                <p>Developed an AI-powered chatbot for hotel management, providing instant responses to guest queries using Python and OpenAI API for natural language processing.</p>
+            </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="grademan.html" class="work-item">
+            <img src="images/grademanger3.avif" alt="Grade Manager Plus">
+            <div class="work-description">
+                <h3>Grade Manager Plus</h3>
+                <p>Designed a robust login system that allows students to securely view their grades, while providing teachers with features to analyze student performance through intuitive graphs and reports.</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+   <!-- JavaScript for Scroll Animation -->
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        const favSection = document.querySelector('.fav-section');
+        const myWorkSection = document.querySelector('.work-section');
+        const favQuote = document.querySelector('.fav-section'); // Selecting the Fav Quote section
+
+        let scrollPosition = window.scrollY;
+
+        // Fade out the header as you scroll down
+        if (scrollPosition > 0) {
+            header.style.opacity = 1 - scrollPosition / 500;
+            header.style.transform = `translateY(${-scrollPosition / 4}px)`;
+        } else {
+            header.style.opacity = 1;
+            header.style.transform = `translateY(0)`;
+        }
+
+        // Animate the fav and My Work sections as they enter the viewport
+        if (scrollPosition > 300) {
+            favSection.classList.add('fade-in');
+        }
+        if (scrollPosition > 700) {
+            myWorkSection.classList.add('fade-in');
+        }
+
+        // Hide Fav Quote (fav Section) when scrolling to My Work Section
+        const myWorkPosition = myWorkSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (myWorkPosition <= windowHeight / 2) {
+            favQuote.style.opacity = '0'; // Hide fav quote section
+            favQuote.style.transition = 'opacity 0.5s ease-out'; // Smooth fade out
+        } else {
+            favQuote.style.opacity = '1'; // Show fav quote section again when scrolling back
+            favQuote.style.transition = 'opacity 0.5s ease-in'; // Smooth fade in
+        }
+    });
+</script>
+    </script>
+</body>
+</html>
+

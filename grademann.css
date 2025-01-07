@@ -1,0 +1,86 @@
+/* Universal Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0d0d0d; /* Deep Black Background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05); /* Glassmorphism Effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Title Glow Effect */
+.glow-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, rgb(2, 54, 54), rgb(17, 36, 139));
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgb(5, 242, 246), 0 0 25px cyan;
+}
